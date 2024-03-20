@@ -1,0 +1,19 @@
+.parrafo{
+    border: 1px solid pink;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    color: pink;
+    font-size: larger;
+    font-weight: 500;
+}
+div{
+    border: 2px solid violet;
+    color: violet;
+    font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+span ul li{
+    color:  blue;
+    font-style: oblique;
+    font-weight: 700;
+}
