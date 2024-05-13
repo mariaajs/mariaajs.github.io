@@ -7,4 +7,4 @@ Grupo:
 
 pagina: https://www.twitch.tv
 
-![Twitch](Twitch/twitch.JPG)
+![Twitch](Dropbox.JPG)
