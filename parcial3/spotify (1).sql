@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2024 a las 04:37:36
+-- Tiempo de generación: 11-06-2024 a las 03:53:58
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -40,7 +40,15 @@ CREATE TABLE `artistas` (
 
 INSERT INTO `artistas` (`id`, `nombre`, `descripcion`) VALUES
 (1, 'Taylor Swift', 'Taylor Alison Swift es una cantante, compositora, productora discográfica, directora, actriz y empresaria estadounidense. Criada en Wyomissing, se mudó a Nashville a los 14 años para realizar una carrera de música country.'),
-(2, 'Justin Bieber', 'Justin Drew Bieber es un cantautor canadiense.');
+(2, 'Justin Bieber', 'Justin Drew Bieber es un cantautor canadiense.'),
+(3, 'Kendrick Lamar', 'Kendrick Lamar Duckworth es un rapero, compositor, productor discográfico estadounidense.'),
+(4, 'Tyler,The creator', 'Tyler Gregory Okonma, mejor conocido artísticamente como Tyler, the Creator, es un rapero, productor discográfico, director, actor y diseñador de moda estadounidense.'),
+(5, 'Lana del Rey', 'Elizabeth Woolridge Grant, ​conocida artísticamente como Lana Del Rey, es una cantante, compositora, modelo, actriz, escritora, productora y poetisa estadounidense. Su música se distingue por su calidad cinematográfica, su estilo retro y su exploración del romance trágico, el glamur y la melancolía.'),
+(6, 'Billie Eilish', 'Billie Eilish Pirate Baird O\'Connell, conocida simplemente como Billie Eilish, es una cantante estadounidense. Obtuvo atención pública por primera vez en diciembre de 2015 con su sencillo debut «Ocean Eyes», escrito y producido por su hermano Finneas O\'Connell, con quien colabora en música y espectá'),
+(7, 'Travis Scott', 'Jacques Berman Webster II, ​ más conocido por su nombre artístico Travis Scott, es un rapero, compositor y productor musical estadounidense.'),
+(8, 'Kanye West', 'Kanye West es un rapero, productor discográfico, diseñador de moda y empresario estadounidense'),
+(9, 'Ariana Grande', 'Ariana Grande-Butera ​ es una cantante, actriz y empresaria estadounidense.​ Comenzó su carrera musical en Broadway a los 15 años en el musical 13'),
+(10, 'Natalia Lafourcade', 'María Natalia Lafourcade Silva, conocida como Natalia Lafourcade, es una cantante, ​ compositora, ​ actriz, ​ productora musical, ​ arreglista, ​ diseñadora​ activista y multinstrumentista mexicana.​ ');
 
 -- --------------------------------------------------------
 
@@ -69,6 +77,13 @@ CREATE TABLE `canciones` (
   `activo` tinyint(1) NOT NULL,
   `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `canciones`
+--
+
+INSERT INTO `canciones` (`id`, `nombre`, `genero_id`, `duracion`, `fecha`, `activo`, `foto`) VALUES
+(0, 'London Boy', 0, '03:12:00', '2019-08-23', 0, '');
 
 -- --------------------------------------------------------
 
@@ -124,7 +139,9 @@ CREATE TABLE `membresias` (
 --
 
 INSERT INTO `membresias` (`id`, `desc`, `precio`) VALUES
-(1, 'plan Premium Individual, 1 cuenta para una persona.', 0);
+(1, 'plan Premium Individual, 1 cuenta para una persona.', 169),
+(2, ' plan Premium Duo, 2 cuentas para una pareja', 129),
+(3, ' plan Premium Familiar ', 199);
 
 -- --------------------------------------------------------
 
@@ -167,6 +184,13 @@ CREATE TABLE `usuarios` (
   `correo` varchar(150) NOT NULL,
   `membresia_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `membresia_id`) VALUES
+(0, 'Ricardo Inzunza', ' @ricardounicornio88', 0);
 
 --
 -- Índices para tablas volcadas
@@ -244,7 +268,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `artistas_canciones`
