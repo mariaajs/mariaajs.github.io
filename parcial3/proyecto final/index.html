@@ -12,21 +12,55 @@
     <body>
         <div class="container">
             <h1> Proyecto final parcial 3</h1>
+            <h2>María José Cabrales Penney 4AVP</h2>
             <div class="row mt-2">
                 <div class="col">
-                    <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);">SELECT * FROM alumno:</h3>
-                    <p>obtener el listado de todos los alumnos de la Facultad.</p>
+                    <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);">1: 
+                        SELECT * FROM alumno:</h3>
+                    <p>Obtener el listado de todos los alumnos de la Facultad.</p>
                     <img src="consulta1.png" alt="" class="img-fluid" width="500px"> 
                 </div>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col">
-                <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);">SELECT curso.nombreDescriptivo, asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso = asignatura.curso</h3>
-                <p>obtener el listado de todos los nombres de los cursos y asignaturas que tiene</p>
+                <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);">2: SELECT curso.nombreDescriptivo, asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso = asignatura.curso</h3>
+                <p>Obtener el listado de todos los nombres de los cursos y asignaturas que tiene</p>
                 <img src="consulta2.png" alt="" class="img-fluid" width="500px"> 
             </div>
         </div>
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 3: SELECT nombre,apellido1,apellido2 FROM alumno WHERE beca LIKE "si"</h3>
+                <p>Obtener el listado nombre y apellido de alumnos que tengan beca</p>
+                <img src="consulta3.png" alt="" class="img-fluid" width="500px"> 
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col">
+            <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 4: SELECT profesor.nombre,profesor.apellido1,tlfcontactoprof.telefono FROM profesor INNER JOIN tlfcontactoprof ON profesor.idProfesor = tlfcontactoprof.idProfesor</h3>
+            <p>Obtener el listado de profesores (nombre,apellido), y su numero de contacto.</p>
+            <img src="consulta4.png" alt="" class="img-fluid" width="500px"> 
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col">
+        <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 5: SELECT alumno.nombre,alumno.apellido1,alumno.apellido2 FROM alumno INNER JOIN matricula ON matricula.idAlumno = alumno.idAlumno INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura WHERE asignatura.idAsignatura LIKE "AS009"</h3>
+        <p>Obtener listado de alumnos (todos los campos) que están inscritos a la asignatura de programación AS009.</p>
+        <img src="consulta5.png" alt="" class="img-fluid" width="500px"> 
+    </div>
+</div>
+</div>
+<div class="row mt-2">
+    <div class="col">
+        <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 6: PENDIENTEEEEEEE UWU</h3>
+        <p>Obtener listado de profesores y asignaturas que imparten.</p>
+        <img src="consulta5.png" alt="" class="img-fluid" width="500px"> 
+    </div>
+</div>
+  
   
         <script src="js/bootstrap.js"></script>
     </body>
