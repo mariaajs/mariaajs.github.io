@@ -69,9 +69,9 @@
 </div>
 <div class="row mt-2">
     <div class="col">
-        <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 8: </h3>
-        <p>Obtener listado de alumnos que les da clase el profesor con ID PR048 (JOSE MANUEL), sin importar en que asignatura esté inscrito.</p>
-        <img src="consulta7.png" alt="" class="img-fluid" width="500px"> 
+        <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 8:SELECT alumno.* FROM alumno INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura WHERE asignatura.coordinador = 'PR016' </h3>
+        <p>Obtener listado de alumnos que les da clase el profesor con ID PR016, sin importar en que asignatura esté inscrito.</p>
+        <img src="consulta8.png" alt="" class="img-fluid" width="500px"> 
     </div>
 </div>
 <div class="row mt-2">
@@ -83,9 +83,9 @@
 </div>
 <div class="row mt-2">
     <div class="col">
-        <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 10: </h3>
+        <h3 class="card" style="color: rgb(255, 185, 197); border: 1px solid rgb(255, 240, 227); border-radius: 5px; background-color: rgb(255, 240, 227);"> 10: SELECT al.idAlumno, al.nombre AS nombre_alumno, al.apellido1 AS apellido1_alumno, al.apellido2 AS apellido2_alumno, a.idAsignatura, a.nombre AS nombre_asignatura, p.idProfesor, p.nombre AS nombre_profesor, p.apellido1 AS apellido1_profesor, p.apellido2 AS apellido2_profesor, c.idCurso, c.nombreDescriptivo AS nombre_curso FROM alumno al JOIN matricula m ON al.idAlumno = m.idAlumno JOIN asignatura a ON m.idAsignatura = a.idAsignatura JOIN impartir i ON a.idAsignatura = i.idAsignatura JOIN profesor p ON i.idProfesor = p.idProfesor JOIN curso c ON a.curso = c.idCurso ORDER BY al.idAlumno, a.idAsignatura </h3>
         <p>Obtener listado de alumnos, con asignaturas que cursa, profesor que la imparte y curso al que pertenece.</p>
-        <img src="consulta7.png" alt="" class="img-fluid" width="500px"> 
+        <img src="consulta10.png" alt="" class="img-fluid" width="500px"> 
     </div>
 </div>
   
